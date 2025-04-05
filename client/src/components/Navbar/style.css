@@ -1,0 +1,152 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.logo-icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo-part {
+  width: 15px;
+  height: 15px;
+  margin: 1px;
+  border-radius: 3px;
+}
+
+.logo-part-1 {
+  background: linear-gradient(to right, #FF7E43, #FFB88C);
+}
+
+.logo-part-2 {
+  background: linear-gradient(to right, #91EAE4, #7F7FD5);
+}
+
+.logo-part-3 {
+  background: linear-gradient(to right, #7F7FD5, #86A8E7);
+}
+
+.logo-part-4 {
+  background: linear-gradient(to right, #FFB88C, #FF9A77);
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item {
+  color: white;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover {
+  color: #91EAE4;
+}
+
+.contact-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: white;
+  color: #333;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+@media (max-width: 992px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .menu-items {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: rgba(10, 10, 10, 0.9);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding: 2rem 0;
+  }
+
+  .menu-items.active {
+    left: 0;
+  }
+
+  .menu-item {
+    margin: 1rem 0;
+  }
+  
+  .contact-btn {
+    margin: 1.5rem 0 0 0;
+  }
+} 
