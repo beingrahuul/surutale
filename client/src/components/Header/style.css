@@ -2,8 +2,8 @@
   background-color: #0a0a0a;
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    radial-gradient(circle at 10% 90%, rgba(255, 126, 67, 0.4), transparent 50%),
-    radial-gradient(circle at 90% 10%, rgba(145, 234, 228, 0.4), transparent 50%);
+    radial-gradient(circle at 10% 90%, rgba(255, 126, 67, 0.4), transparent 30%),
+    radial-gradient(circle at 90% 10%, rgba(145, 234, 228, 0.4), transparent 30%);
   background-size: cover;
   color: #ffffff;
   padding: 6rem 2rem;
@@ -26,37 +26,21 @@
   background-image: 
     linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 30px 30px;
+  background-size: 60px 60px;
   pointer-events: none;
   z-index: 1;
 }
 
-/* Square cage pattern secondary grid (larger squares) */
-.header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 2px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 2px, transparent 2px);
-  background-size: 100px 100px;
-  pointer-events: none;
-  z-index: 1;
-  animation: gridFloat 20s infinite alternate ease-in-out;
-}
 
 /* Additional corner glows */
 .hero::before {
   content: '';
   position: absolute;
-  bottom: -200px;
-  left: -200px;
+  bottom: -100%;
+  left: -100%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(255, 126, 67, 0.3) 0%, rgba(255, 126, 67, 0.1) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 126, 67, 0.6) 0%, rgba(255, 126, 67, 0.5) 50%, transparent 70%);
   border-radius: 50%;
   z-index: -1;
   filter: blur(60px);
@@ -65,24 +49,17 @@
 .hero::after {
   content: '';
   position: absolute;
-  top: -200px;
-  right: -200px;
+  top: -100%;
+  right: -100%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(145, 234, 228, 0.3) 0%, rgba(127, 127, 213, 0.2) 50%, transparent 70%);
+  background: radial-gradient(circle, rgba(145, 234, 228, 0.6) 0%, rgba(127, 127, 213, 0.5) 50%, transparent 70%);
   border-radius: 50%;
   z-index: -1;
   filter: blur(60px);
 }
 
-@keyframes gridFloat {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
-  100% {
-    transform: translateY(10px) translateX(10px);
-  }
-}
+
 
 .hero {
   max-width: 1200px;
